@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/**************************************************/
+/*Header del menu
+
+header nav div ul li {
+    
+    margin-left: 10px;
+}*/
+/**************************************************/
+   /* Sub Menu*/
+
+ul {
+    list-style: none;
+    font-size: 0;
+}
+
+li {
+display: inline-block;
+width: 15%;
+position: relative;
+font-size: 20px;
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+}
+nav li:hover ul {
+    display: block;
+       
+}
+header nav div ul li a:hover{
+    background-color:#494031;
+}
+
+/**************************************************/
+/* Flexbox pagina principal*/
+
+nav{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between ;
+
+}
+main {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+}
+
+/*section div p {
+    padding: 0 2rem;
+}*/
+
+
+
+/**************************************************/
+/* Flexbox pagina Catalogo*/
+main section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px;
+}
+
+main section div a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+
+/*ANIMACION del MAIN*/
+.animacion:hover{
+    animation: cambioColor 4s;
+}
+
+@keyframes cambioColor{
+    0% {
+        background-color: white;
+    }
+    20%{
+        background-color: green;
+        border-radius: 50%;
+    }
+    40%{
+        background-color: blueviolet;
+        border-radius: 50%;
+    }
+    70%{
+        border-radius:0;
+    }
+    100%{
+        background-color: black
+    }
+}
+
+/**************************************************/
+
+    
+    
+    
+
+/**************************************************/
+/* Flexbox pagina footer*/
+
+footer div{
+    display: flex;
+    flex-direction: row;
+    /*align-items: center;*/
+    justify-content: space-evenly;
+
+}
+
+footer nav a{
+    margin: 20px;
+  
+}
+
+
+/**************************************************/
+
+    /* Quita el sub Rallado del Texto*/
+header nav ul li a {
+    color: #b9975b;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 40px;
+}     
+
+    /* Fondo del menu   */
+.header_Fondo{
+    background-color: black;
+    
+}
+
+/**************************************************/
+
+
+/*Main/
+    
+
+    /*Fondo del Main*/
+.main_Fondo {
+    background-color: black;
+    text-align: center;
+}
+
+.main_Texto{
+    text-align: center;
+    color: #b9975b;
+    background-color: black;
+}
+h1{
+    font-family: 'K2D', sans-serif;
+}
+
+main section h2 {
+    text-align: center;
+    padding: 2rem
+}
+
+
+/*Fondo del Section*/
+.section_Fondo{
+    background-color: black;
+    color: #b9975b;
+    text-align: justify;
+    font-family: 'K2D', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}   
+/**************************************************/
+
+/* Animacion con transicion */
+.box-foto{
+    transition: all 4s;
+}
+
+.box-foto:hover{
+    transform: scale(2);
+}
+
+
+
+
+/*section*/
+
+.section_Tamaño{
+    width: 160px;
+    background-color: black;
+ }
+
+.section_Container_BTO{
+    border: 2px solid #b9975b;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+h2{
+    font-family: 'K2D', sans-serif;
+}
+
+/*section{
+    height: 500px;
+}*/
+
+
+/***************************************************/
+
+
+
+/*Footer*/
+
+.footer_Fondo{
+    background-color: black;
+}
+
+footer div {
+    color: #b9975b;
+    font-family: 'K2D', sans-serif ;
+}
+
+/***********************************************************/
+
+
+
+/***********************************************************/
+
+
+.container__grid{
+    display: grid;
+    grid-template-rows: 100px 500px 200px 60px;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "section section section"
+    "footer footer footer footer";
+}
+
+
+/*TABLET*/
+@media (max-width: 991px){
+    header{
+        grid-area: header;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    section{
+        grid-area: section;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+    .container__grid{
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "section section"
+        "footer footer";    
+    }
+
+}
+
+
+
+
+
+
+
+    /*CELULAR*/
+@media (max-width: 575px){
+    header{
+        grid-area: header;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    section{
+        grid-area: section;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+    .container__grid{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "section"
+        "footer";    
+    }
+   
+}
