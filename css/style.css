@@ -88,7 +88,7 @@ main section div a{
 
 @keyframes cambioColor{
     0% {
-        background-color: white;
+        background-color: red;
     }
     20%{
         background-color: green;
