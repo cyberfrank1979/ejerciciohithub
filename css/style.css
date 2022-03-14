@@ -91,11 +91,11 @@ main section div a{
         background-color: red;
     }
     20%{
-        background-color: green;
+        background-color: greenyellow;
         border-radius: 50%;
     }
     40%{
-        background-color: blueviolet;
+        background-color: black;
         border-radius: 50%;
     }
     70%{
